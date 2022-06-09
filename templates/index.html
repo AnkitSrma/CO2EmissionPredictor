@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+
+  <title>Prediction</title>
+  <meta charset="UTF-8">
+  <title>Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <!-- Bootstrap -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+  <!-- Custom styles -->
+
+  <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+  <meta charset="UTF-8">
+  <title>CO2 Emission Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="home">
+  <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li ><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li class="active"><a href="/pred">Prediction</a>
+          <li><a href="/visual">Visualization</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="new" style="position: relative; right: 50px"; >
+  <div style="position: relative; top: 150px;" class="login">
+    <h1>Predict CO2 Emission of Vehicles</h1>
+    <h3> Enter the following values to predict the CO2 emission from the vehicle</h3>
+    
+    
+
+    <!-- <form name="google-sheet">
+      <label for="cars">Choose the type of vehicle:</label>
+      <select name="Type" id="cars">
+        <option value="Bike">Bike</option>
+        <option value="Car">Car</option>
+      </select>
+      <br>
+      <input type="text" name="Brand" placeholder="Brand" required="required" />
+    </form> -->
+
+    <!-- <form action="{{ url_for('predict')}}" method="post" name="google-sheet"> -->
+    <!-- <form action="{{url_for('visualize')}}">
+      <button type="submit" class="btn"> Visualize Data</button>
+    </form> -->
+
+
+    <a href="https://script.google.com/macros/s/AKfycbyA6dwHbfuEJRm95e88FyJmmc2GYYnL1AaskQ0qYYGf-yGgTBfX9jruGYbO6V5r6PY/exec">
+      <button class="btn">Saved Datas</button>
+  </a>
+        
+
+    <!-- <button href="C:/Users/Ankit/Desktop/CO2 Emission/Visualization/index.html"> Go here</button> -->
+
+      <form action="{{ url_for('predict')}}" method="post" name="google-sheet">
+      <label for="cars">Choose the type of vehicle:</label>
+      <select name="Type" id="cars">
+        <option value="Bike">Bike</option>
+        <option value="Car">Car</option>
+      </select>
+      <br>
+      <input type="text" name="Brand" placeholder="Brand" required="required" />
+      <input type="number"  name="EngineSize" placeholder="Engine Size" required="required" min="1" max="7" />
+      <input type="number"  name="Cylinders" placeholder="Cylinders" required="required" min="1" max="7" />
+      <input type="number" name="Fuel" placeholder="Fuel" required="required" min="1" max="50"/>
+      <input type="number" name="Age" placeholder="Age" required="required" min="1" max="30"/>
+
+
+      <button type="submit" name="submit" value="predict" class="btn">Predict</button>
+      <!-- <button type="submit" name="export" value="export" class="btn"> Export</button> -->
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+    <!-- <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwY-9mA8l9haCTXcCT6Mk-5KQ6XqjAoN0-EJdaizkGxFo7KHGsXizxV9zexc7eQEnaX/exec'
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {  
+          e.preventDefault()
+
+          // alert({{prediction_text}})
+
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Exported."))
+          .catch(error => console.error('Error!', error.message))
+          // .then(response => alert("{{prediction_text}}"))
+      })
+    </script> -->
+
+    
+   
+
+  </div>
+
+  
+  
+
+
+</body>
+
+</html>

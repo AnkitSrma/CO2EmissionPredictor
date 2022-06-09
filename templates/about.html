@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+
+  <title>CO2 Emission Predictor</title>
+  <meta charset="UTF-8">
+  <title>CO2 Emission Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <!-- Bootstrap -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+  <!-- Custom styles -->
+
+  <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+
+<body class="home">
+
+  <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span> </button>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="/about">About</a></li>
+          <li class="dropdown">
+            <a href="/pred">Prediction</a>
+          <li><a href="/visual">Visualization</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+
+    <div class="container">
+      <center>
+        <h2><span>What? Why? How?</span></h2>
+      </center>
+      <h3 class="">What ? </h3> <br>
+
+      <p> CO2 Emission Predictor is a web application that predicts the carbon emission from vehicles. <br>
+        It is a web based application that uses linear regression algorithm for the prediction of carbon dioxide
+        emissions. <br>
+        A simple to use portal that asks user for their vehicle information and returns the amount of possible carbon
+        dioxide emission. <br>
+        It also dynamically visualizes the datasets used for the very prediction.<br>
+        Last but not least, it stores the user inputs for further references.<br><br>
+        Currently, the carbon emission information is not very transparent in the context of our country. As it stands,
+        our city happens to be the 6th most polluted city in the world in terms of air pollution index. Co2 Emission
+        Predictor focuses on this very matter by providing a platform for all public to view the carbon emission from
+        pre-existing data set or predict the carbon emission from their own vehicle. This will not only raise awareness,
+        but diminish the stigma of petroleum vehicle preferences. It is an efficient web application that makes use of a
+        highly studied dataset for the calculation of carbon emission using linear regression algorithm. The main
+        purpose of this project is to give the carbon emission value in the most accurate way as possible and save our
+        time in doing extensive research for each and every vehicle. Further, this project aims to showcase a
+        visualization of the pollution emitted by the vehicles, be it car or motorbike.
+
+        <br> <br>
+
+      <h3 class="">Why ? </h3> <br>
+
+      A typical passenger vehicle emits about 4.6 metric tons of carbon dioxide per year. Globally, 80% of CO2 emission
+      is from combustion of fossil fuels mainly in manufacturing and transportation industry. Our city currently ranks
+      6th in the most polluted city of the world. There are many problems caused in our day-to-day life due to this
+      alarming situation. And the very main reason for this problem, is unawareness by the general public about their
+      ecological footprint. In many cases, people just go about their day-to-day life without a care about the carbon
+      emitted by their vehicle.
+
+      The objectives of this project are to: <br> <br>
+      1. Help user predict carbon emission from their vehicle. <br>
+      2. To provide a simple portal that takes multiple information (at least 3) about their vehicle for prediction.
+      <br>
+      3. To visualize the carbon emission from the existing dataset. <br>
+      4. To promote EVs, or any other vehicle that produce less emission. <br>
+
+      <br> <br>
+
+      <h3 class="">How ? </h3> <br>
+
+      Linear regression is a quiet and simple statistical regression method used for predictive analysis and shows the
+      relationship between the continuous variables. Linear regression shows the linear relationship between the
+      independent variable (X-axis) and the dependent variable (Y-axis), consequently called linear regression. If there
+      is a single input variable (x), such linear regression is called simple linear regression. And if there is more
+      than one input variable, such linear regression is called multiple linear regression. The linear regression model
+      gives a sloped straight line describing the relationship within the variables.</p>
+
+      <br> 
+
+      <img src="{{url_for('static', filename='variab.png')}}" />
+        <br> <br> 
+      The above graph presents the linear relationship between the dependent variable and independent variables. When
+      the value of x (independent variable) increases, the value of y (dependent variable) is likewise increasing. The
+      red line is referred to as the best fit straight line. Based on the given data points, we try to plot a line that
+      models the points the best. <br> 
+      To calculate best-fit line linear regression uses a traditional slope-intercept form.
+
+      <br>
+
+
+
+    </div>
+
+
+
+  </div> <!-- / section -->
+
+
+  <main id="main">
+
+    <div class="">
+      <center>
+        <h2><span>Things you could do.</span></h2>
+      </center>
+
+
+      <div class="col-sm-6 col-md-3">
+        <br>
+        <h3 style="color: white; position: relative; top: 3px;" class="text-center">Choose EVs</h3>
+        <br>
+        <p style="color:aliceblue"> By choosing to drive an EV you are helping to reduce harmful air pollution from
+          exhaust emissions. An EV has
+          zero exhaust emissions, but still creates a degree of greenhouse gas emissions when it is charged from the
+          electricity grid.</p>
+
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <br>
+        <h3 style="color: white; position: relative; top: 3px;" class="text-center">Choose BS6</h3>
+        <br>
+        <p style="color:aliceblue"> To regulate the pollution emitted by cars and two-wheelers, the government
+          has put forth regulations known as Bharat Stage Emission Standards. A BSVI engine outputs 60% less emission as
+          compared to BS4 engine and is considered a much better alternative.</p>
+
+
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <br>
+        <h3 style="color: white; position: relative; top: 3px;" class="text-center">Choose Public Transit</h3>
+        <br>
+        <p style="color:aliceblue"> Taking public transit not only reduces the carbon emission but also promotes a
+          healthier traffic in the community. Furthermore, promoting EVs and public transit could very well end the
+          emission problem altogether.</p>
+        <!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
+      </div>
+    </div>
+
+    </div> <!-- / section -->
+    <br>
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div style="position: relative; left:60px" class="col-md-1 widget">
+          <h4 style="color:white; position: relative; bottom: 10px; " class="widget-title"> <strong> Contact </strong>
+          </h4>
+          <div class="widget-body">
+            <p style="color:white"> 9823004560<br>
+              <a href="mailto:#">ankit.sharma@deerwalk.edu.np</a><br>
+              <br>
+              Dhobighat, Lalitpur, Nepal
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3 widget">
+
+          <h4 style="color:white; text-align: center; position:relative; right: 140px;" class="widget-title">
+            <strong>Follow Me</strong>
+          </h4>
+
+          <div style="position: relative; right: 70px" class="widget-body">
+            <p class="follow-me-icons">
+              <a href="https://twitter.com/nasu_la"><i class="fa fa-twitter fa-2"></i></a>
+              <a href="https://www.reddit.com/user/nasu-la"><i class="fa fa-dribbble fa-2"></i></a>
+              <a href="https://www.reddit.com/user/nasu-la"><i class="fa fa-github fa-2"></i></a>
+              <a href="https://www.facebook.com/a4ankitbruh"><i class="fa fa-facebook fa-2"></i></a>
+            </p>
+          </div>
+        </div>
+        </div>
+
+
+
+      </div> <!-- /row of widgets -->
+    </div>
+  </footer>
+
+
+  <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/template.js"></script>
+
+
+
+
+</body>
+
+</html>
